@@ -1,0 +1,33 @@
+.headerContainer {
+    position: sticky;
+    height: 60px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 1px 24px 0 rgba(0,0,0,0.15);
+  
+}
+
+h1 {
+    margin-block-start: 0;
+}
+
+.logo {
+    width: 150px;
+    margin-top:0.5%;
+    margin-left:0.5%;
+}
+
+@media (max-width: 375px) {
+    .headerContainer {
+        position: sticky;
+        height: 60px;
+        z-index: 1;
+        background: white;
+        box-shadow: 0 1px 24px 0 rgba(0,0,0,0.15);
+        display:flex;
+        justify-content: center;
+      
+    }
+
+
+}
