@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Imagepaint from './Imagepaint'
+import Loader from './Loader'
 import './Instapaint.css'
 import './Instapaint.scss'
 
@@ -9,7 +10,8 @@ class Instapaint extends Component {
     state = {
         webcam : [],
         category : '',
-        country: ''
+        country: '',
+        isLoading: false
     }
 
     getCategory = (event) => {
@@ -25,6 +27,7 @@ class Instapaint extends Component {
 
     getBeach = () => {
         const {category, country} = this.state
+        this.setState({isLoading: true})
         const url = `https://api.windy.com/api/webcams/v2/list/country=${country}/category=${category}/orderby=popularity/limit=12?show=webcams:location,image,player`
         axios.get(url,
             {
@@ -34,7 +37,7 @@ class Instapaint extends Component {
               }
             )
         .then(response => response.data)
-        .then(data => this.setState({webcam : data.result.webcams}))
+        .then(data => this.setState({webcam : data.result.webcams, isLoading: false}))
         .catch(error => console.log(error))
     }
     // sendState = (dataToGive) => {
@@ -50,10 +53,10 @@ class Instapaint extends Component {
             <div className="containerglobal">
                 <div className="choices">
                     <div className="choicesinput">
-                        <label htmlFor="category"> Sélectionnez une catégorie:</label>
+                        <label htmlFor="category"> Choix catégorie:</label>
                         <div className="select">
                             <select name="category" id="category" onChange={this.getCategory}>
-                                <option value="" selected disabled>Sélectionnez une catégorie</option>
+                                <option value="" selected disabled>Choix catégorie</option>
                                 <option value="beach">Beach</option>
                                 <option value="coast">Coast</option>
                                 <option value="forest">Forest</option>
@@ -69,10 +72,10 @@ class Instapaint extends Component {
                         </div>
                     </div>
                     <div className="choicesinput">
-                        <label htmlFor="country"> Sélectionnez un pays</label>
+                        <label htmlFor="country"> Choix pays</label>
                         <div className="select">
                             <select name="country" id="country" onChange={this.getCountry}>
-                                <option value="" selected disabled>Sélectionnez un pays</option>
+                                <option value="" selected disabled>Choix pays</option>
                                 <option value="FR">France</option>
                                 <option value="GR">Greece</option>
                                 <option value="UK">UK</option>
@@ -99,6 +102,13 @@ class Instapaint extends Component {
                     <button disabled={!enabled} onClick={this.getBeach}>FAITES MOI VOYAGER</button>
                 </div>
             </div>
+            {
+                this.state.isLoading
+                ? <Loader />
+                : null   
+            }
+
+
             <div>
                 <div className="Result">
                     {webcam.map(element =>

@@ -10,8 +10,8 @@ class Like extends Component {
     };
   }
 
-  handleCounter = (value) => {
-    this.setState({count: value});
+  handleCounter = (value1) => {
+    this.setState({count: value1});
   }
 
   render() {

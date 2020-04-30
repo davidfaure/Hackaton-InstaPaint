@@ -59,11 +59,12 @@ class TestModal extends React.Component {
                      
                
                       <div className="blockLike">
-                         <Like />
+                        
                      
                       </div>
                       <div className="blockAddComment">
                         <div className="textArea">
+                        <Like />
                         <CommentBox />
                       </div>   
                      
