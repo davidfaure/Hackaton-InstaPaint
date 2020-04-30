@@ -1,0 +1,142 @@
+.commentNumber {
+    margin-left: 50%;
+    margin-top: -13.5%;
+    font-size:0.8em;
+    color: rgb(73, 73, 73);
+}
+
+
+.showHideComment {
+    margin-left:100%;
+    margin-top:-20px;
+}
+
+.commentAuthorName {
+    font-size:0.6em;
+    font-weight: bold;
+    margin-left:20%;
+    width:100px;
+}
+
+.quote{
+    font-size:0.6em;
+    margin-block-start: 0em;
+    margin-inline-start: 21px;
+    margin-top:8.9%;
+
+}
+
+.comment{
+    display:flex;
+}
+
+.authorComment {
+    border: none; 
+    height:20px;
+    margin-top:6%;
+   
+}
+
+.contentComment{
+    border: none; 
+    
+}
+
+.comment-form-fields{
+ 
+    margin-top:70px;
+    margin-left:5%;
+    width:240px;
+    border-radius: 6.25em;
+    border: 1px solid rgb(235, 232, 232);
+    font-size: 1em;
+    width:230x;
+}
+
+.containerNameComment{
+    margin-left: 5%;
+    height: 70px;
+}
+
+.comment-form-actions{
+    text-align:center;
+    margin-top:-3%;
+    margin-bottom:3%;
+  
+}
+
+.ctaSubmitComment{
+    border-radius: 6.25em;
+    border:none;
+    color: rgb(54, 154, 212);
+    font-weight: bold;
+}
+
+
+.ctaSubmitComment:hover{
+    border-radius: 6.25em;
+    border:none;
+    color: rgb(146, 185, 207);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgb(207, 203, 203);
+   
+  }
+
+  @media (max-width: 861px) {
+
+
+  .commentNumber {
+    margin-left: 50%;
+    margin-top: -12.5%;
+    font-size:0.8em;
+    color: rgb(73, 73, 73);
+    }
+
+    .comment-form-fields{
+ 
+        margin-top:10px;
+        margin-left:5%;
+        width:240px;
+        border-radius: 6.25em;
+        border: 1px solid rgb(235, 232, 232);
+        font-size: 1em;
+        width:230x;
+  
+    }
+}
+
+@media (max-width: 375px) {
+
+   
+    .commentNumber {
+        margin-left: 40%;
+        margin-top: -12.8%;
+        font-size:0.8em;
+        color: rgb(73, 73, 73);
+        }
+
+        .comment-form-fields{
+ 
+            margin-top:10px;
+            margin-left:-2%;
+            width:240px;
+            border-radius: 6.25em;
+            border: 1px solid rgb(235, 232, 232);
+            font-size: 1em;
+            width:230x;
+      
+        }
+
+
+.commentAuthorName {
+    font-size:0.6em;
+    font-weight: bold;
+    margin-left:3%;
+    width:100px;
+}
+
+}

@@ -1,0 +1,32 @@
+.ContainerModal {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 10px grey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 20px 0 20px 0;
+}
+
+.Informations {
+    padding: 20px;
+    text-align: center;
+    width: 360px;
+}
+
+.Informations h2 {
+    height: 70px;
+    color: rgb(127, 202, 245);
+}
+
+.Informations small {
+    margin-top: 40px;
+}
+
+.Image {
+    width: auto;
+    height: auto;
+}
+
+.ButtonModal {
+    align-self: center;
+}

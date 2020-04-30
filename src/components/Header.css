@@ -17,6 +17,21 @@ h1 {
     margin-left:0.5%;
 }
 
+
+.Map {
+    width : 100%;
+    height: 100px;
+    margin: 0;
+}
+
+
+.mapContainer {
+    height: 100px;
+    width: 500px;
+}
+
+
+
 @media (max-width: 375px) {
     .headerContainer {
         position: sticky;
