@@ -33,7 +33,7 @@ class TestModal extends React.Component {
     const { open } = this.state;
     return (
       <div style={styles} className="Container">
-        <button onClick={this.onOpenModal}>See the webcam</button>
+        <button onClick={this.onOpenModal}>Live Webcam</button>
         <Modal className="modal" open={open} onClose={this.onCloseModal}>
           <div className="containerModal">
              <div className="Image">
@@ -59,11 +59,12 @@ class TestModal extends React.Component {
                      
                
                       <div className="blockLike">
-                         <Like />
+                        
                      
                       </div>
                       <div className="blockAddComment">
                         <div className="textArea">
+                        <Like />
                         <CommentBox />
                       </div>   
                      

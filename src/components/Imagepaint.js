@@ -21,8 +21,8 @@ const Imagepaint = (props) => {
                 </div>
                 <div className="Informations">
                     <h2><b>{props.title}</b></h2>
-                    <p><b>Country</b> : {props.country}</p>
-                    <p><b>Region</b> : {props.region}</p>
+                    <p><b>Pays</b> : {props.country}</p>
+                    <p><b>Région</b> : {props.region}</p>
                     {/* <iframe src={props.player} alt="campreview"/> */}
                     <small><a href={props.wikipedia}>Wikipedia : {props.region}</a></small>
                 </div>

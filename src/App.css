@@ -1,3 +1,34 @@
 body {
   background-color: #FFFFFF;
 }
+
+.containerApp{
+  display: flex;
+	flex-direction: column;
+}
+
+.intro {
+  margin-top: -7%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight:bold;
+}
+
+.contentMain {
+  margin-top:5%;
+}
+
+@media (max-width: 375px) {
+  .intro {
+    margin-top: -25%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight:bold;
+    margin-bottom: 10%;
+    width: 250px;
+    margin-left: 15%;
+
+
+  }
+
+}

@@ -28,7 +28,7 @@ class Instapaint extends Component {
     getBeach = () => {
         const {category, country} = this.state
         this.setState({isLoading: true})
-        const url = `https://api.windy.com/api/webcams/v2/list/country=${country}/category=${category}/orderby=popularity/limit=25?show=webcams:location,image,player`
+        const url = `https://api.windy.com/api/webcams/v2/list/country=${country}/category=${category}/orderby=popularity/limit=12?show=webcams:location,image,player`
         axios.get(url,
             {
                 headers: {
@@ -51,10 +51,10 @@ class Instapaint extends Component {
             <div className="containerglobal">
                 <div className="choices">
                     <div className="choicesinput">
-                        <label htmlFor="category"> Sélectionnez une catégorie:</label>
+                        <label htmlFor="category"> Choix catégorie:</label>
                         <div className="select">
                             <select name="category" id="category" onChange={this.getCategory}>
-                                <option value="" selected disabled>Sélectionnez une catégorie</option>
+                                <option value="" selected disabled>Catégorie</option>
                                 <option value="beach">Beach</option>
                                 <option value="coast">Coast</option>
                                 <option value="forest">Forest</option>
@@ -70,10 +70,10 @@ class Instapaint extends Component {
                         </div>
                     </div>
                     <div className="choicesinput">
-                        <label htmlFor="country"> Sélectionnez un pays</label>
+                        <label htmlFor="country"> Choix pays</label>
                         <div className="select">
                             <select name="country" id="country" onChange={this.getCountry}>
-                                <option value="" selected disabled>Sélectionnez un pays</option>
+                                <option value="" selected disabled>Pays</option>
                                 <option value="FR">France</option>
                                 <option value="GR">Greece</option>
                                 <option value="UK">UK</option>
