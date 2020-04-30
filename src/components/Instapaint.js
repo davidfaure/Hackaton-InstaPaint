@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Imagepaint from './Imagepaint'
+import Loader from './Loader'
 import './Instapaint.css'
 import './Instapaint.scss'
 
@@ -9,7 +10,8 @@ class Instapaint extends Component {
     state = {
         webcam : [],
         category : '',
-        country: ''
+        country: '',
+        isLoading: false
     }
 
     getCategory = (event) => {
@@ -25,7 +27,8 @@ class Instapaint extends Component {
 
     getBeach = () => {
         const {category, country} = this.state
-        const url = `https://api.windy.com/api/webcams/v2/list/country=${country}/category=${category}/orderby=popularity/limit=12?show=webcams:location,image,player`
+        this.setState({isLoading: true})
+        const url = `https://api.windy.com/api/webcams/v2/list/country=${country}/category=${category}/orderby=popularity/limit=25?show=webcams:location,image,player`
         axios.get(url,
             {
                 headers: {
@@ -34,12 +37,10 @@ class Instapaint extends Component {
               }
             )
         .then(response => response.data)
-        .then(data => this.setState({webcam : data.result.webcams}))
+        .then(data => this.setState({webcam : data.result.webcams, 
+                                    isLoading: false}))
         .catch(error => console.log(error))
     }
-    // sendState = (dataToGive) => {
-    //     this.state.
-    // }
 
     render(){
         const {webcam, category, country} = this.state;
@@ -99,6 +100,11 @@ class Instapaint extends Component {
                     <button disabled={!enabled} onClick={this.getBeach}>FAITES MOI VOYAGER</button>
                 </div>
             </div>
+            {
+                this.state.isLoading
+                ? <Loader />
+                : null   
+            }
             <div>
                 <div className="Result">
                     {webcam.map(element =>
