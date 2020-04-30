@@ -10,8 +10,16 @@ function App() {
   return (
     <body>
     <div className="App">
+      
       <Header />
-      <Instapaint />
+      <div className="containerApp">
+        <div className="intro">
+          <p className="pIntro">Sélectionnez le voyage de votre choix</p>
+        </div>
+        <div className="contentMain">
+           <Instapaint />
+         </div>
+        </div>
     </div>
     </body>
   );

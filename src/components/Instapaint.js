@@ -56,7 +56,7 @@ class Instapaint extends Component {
                         <label htmlFor="category"> Choix catégorie:</label>
                         <div className="select">
                             <select name="category" id="category" onChange={this.getCategory}>
-                                <option value="" selected disabled>Choix catégorie</option>
+                                <option value="" selected disabled>Catégorie</option>
                                 <option value="beach">Beach</option>
                                 <option value="coast">Coast</option>
                                 <option value="forest">Forest</option>
@@ -75,7 +75,7 @@ class Instapaint extends Component {
                         <label htmlFor="country"> Choix pays</label>
                         <div className="select">
                             <select name="country" id="country" onChange={this.getCountry}>
-                                <option value="" selected disabled>Choix pays</option>
+                                <option value="" selected disabled>Pays</option>
                                 <option value="FR">France</option>
                                 <option value="GR">Greece</option>
                                 <option value="UK">UK</option>
