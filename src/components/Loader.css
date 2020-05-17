@@ -1,11 +1,7 @@
 .Loader {
     position: absolute;
     top: 40%;
-<<<<<<< HEAD
-    left: 50%;
-=======
     left: 30%;
->>>>>>> 495692c4146e77495dfd95a458f1541876ab2d93
     transform: calc(-50%, -50%);
     -webkit-transform: calc(-50%, -50%);
     -moz-transform: calc(-50%, -50%);
