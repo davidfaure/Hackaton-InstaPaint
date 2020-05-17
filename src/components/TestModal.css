@@ -1,0 +1,173 @@
+.Container button {
+    cursor: pointer;
+    width:200px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: rgb(127, 202, 245);
+    color: white;
+    margin: 20px 0 20px 0;
+    font-weight: bold;
+}
+
+.containerModal {
+    display: flex;
+  
+    width:800px;
+}
+
+.blockAddComment{
+    display:flex;
+}
+
+.blockInfo {
+    display:flex;
+}
+
+.Image {
+    width:530px;
+
+    height: 400px;
+}
+
+.painterPicture{
+  
+    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top:5%;
+    margin-left:5%;
+}
+
+.painterName{
+    font-weight: bold;
+    margin-left: 20%;
+    width:110px;
+  
+    margin-top:40%;
+}
+
+.city {
+    margin-left: 10%;
+    width:200px;
+    margin-top:-26%;
+    font-weight: bold;
+}
+
+.hrLine{
+    margin-top: 8%;
+    border-bottom:none;
+    width:200px;
+    border-color: rgb(204, 204, 204);
+
+}
+
+.blockLike {
+    margin-left:5%;
+}
+
+.videoDetails{
+    height: 400px ;
+    width:530px;
+}
+
+.vignetteSpot{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-top:-5%;
+    margin-left:5%;
+}
+
+
+@media (max-width: 861px) {
+    .containerModal {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        width:530px;
+        
+    }
+
+    .hrLine{
+        margin-top:-2%;
+        border-bottom:none;
+        width:230px;
+        border-color: rgb(204, 204, 204);
+        margin-inline-start: 3%;
+    
+    }
+
+
+.vignetteSpot{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top:-22%;
+    margin-left:-27%;
+}
+
+.painterName{
+    font-weight: bold;
+    margin-left: -20%;
+    width:110px;
+    font-weight: bold;
+    margin-top:40%;
+}
+
+.city {
+    margin-left: -13%;
+    width:200px;
+    margin-top:-27%;
+    font-weight: bold;
+}
+
+}
+
+@media (max-width: 375px) {
+
+    .containerModal {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+        width:100px;
+        margin-right: 200px;
+        
+    }
+
+    .videoDetails{
+        height: 360px ;
+        width:300px;
+        margin-right:50px;
+    }
+
+
+    .city {
+        margin-left: 3%;
+        width:200px;
+        margin-top:-30%;
+        font-weight: bold;
+    }
+
+    .vignetteSpot{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-top:7%;
+        margin-left:-20%;
+    }
+
+    .hrLine{
+        margin-top:2%;
+        border-bottom:none;
+        width:230px;
+        border-color: rgb(204, 204, 204);
+        margin-inline-start: 3%;
+    
+    }
+
+}

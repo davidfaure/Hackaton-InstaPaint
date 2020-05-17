@@ -1,0 +1,59 @@
+.containerLike {
+    display: flex;
+    margin-left:3%;
+}
+
+.heartPicto{
+    width: 2em;
+    height: 2em;
+    margin-left:40%;
+
+}
+
+.likecounter {
+    margin-left:7%;
+    margin-top: -3%;
+    font-size:0.9em;
+    color: black;
+    font-weight: bold;
+}
+
+
+@media (max-width: 861px) {
+    .heartPicto{
+        width: 2em;
+        height: 2em;
+     margin-left: 3px;
+     margin-top:10%;
+    
+    }
+
+    .likecounter {
+        margin-left:1%;
+        margin-top: -1%;
+        font-size:0.9em;
+        color: black;
+        font-weight: bold;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+    .heartPicto{
+        width: 2em;
+        height: 2em;
+     margin-left:-10px;
+    
+    }
+
+    .likecounter {
+        margin-left:2%;
+        margin-top: -3%;
+        font-size:0.9em;
+        color: black;
+        font-weight: bold;
+    }
+
+}

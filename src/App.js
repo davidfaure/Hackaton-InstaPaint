@@ -1,11 +1,27 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Instapaint from './components/Instapaint'
+import TestModal from './components/TestModal'
+import Like from './components/Like'
+
 
 function App() {
   return (
+    <body>
     <div className="App">
-     <h1> InstaPaint Mother Flower</h1>
+      
+      <Header />
+      <div className="containerApp">
+        <div className="intro">
+          <p className="pIntro">Sélectionnez le voyage de votre choix</p>
+        </div>
+        <div className="contentMain">
+           <Instapaint />
+         </div>
+        </div>
     </div>
+    </body>
   );
 }
 
